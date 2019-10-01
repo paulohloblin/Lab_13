@@ -1,0 +1,11 @@
+$test: #000000;
+$body: red;
+
+p{
+	text-align: center;
+	color: $test;
+}
+
+body{
+    color: $body;
+}
