@@ -1,30 +1,86 @@
-$test: #000000;
-$body: #f2edf3;
-
-body {
-    background: $body;
+$main: #afaeae;
+$nav: #ffffff;
+:root{
+    --height: 1000px;
+    --topheight: 10%;
+    --leftsidewidth: 18%;
+    --rightsidewidth: 82%;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    background: #f2edf3;
 }
 
-main{
-
+main {
+    padding: 0%;
+    width: var(--rightsidewidth);
+    height: var(--height);
+    background-color: $main;
+    float:right;
 }
 
-nav.top{
-
+.top {
+    width: 100%;
+    height: var(--topheight);
+    background-color: $nav;
+    position: fixed;
+    clear: both;
+    top: 0px;
+    z-index: 2;
 }
 
-nav.left{
+.logo {
+    width: var(--leftsidewidth);
+    height: var(--topheight);
+    background-color: #8c6e95;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
 
+.left {
+    width: var(--leftsidewidth);
+    height: var(--height);
+    float: left;
+    background-color: $nav;
+}
+
+.fake{
+    position: relative;
+    top: 0px;
+    clear: both;
+    width: 100%;
+    height: var(--topheight);
 }
 
 section{
 
 }
 
-div{
+three {
+    margin:20px;
+    width:100px;
+    height: 200px;
+    background-color: #000000;
+}
 
+section.sales {
+    background-color: #ff0000;
+}
+
+section.orders {
+    background-color: #0094ff;
+}
+
+section.online {
+    background-color: #00ff21;
 }
 
 footer{
 
+}
+
+h2{
 }
