@@ -1,24 +1,53 @@
+@import "@material/button/mdc-button";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+@import "@material/layout-grid/mdc-layout-grid";
+
 $main: #afaeae;
 $nav: #ffffff;
+$secheight: 200px;
+  
 :root{
-    --height: 1000px;
-    --topheight: 10%;
+    --height: 2724px;
+    --topheight: 100px;
     --leftsidewidth: 18%;
     --rightsidewidth: 82%;
 }
+
+.mdc-list-item__text {
+    color:#221d20;
+}
+
+.mdc-list-item--activated{
+    @include mdc-drawer-item-activated-icon-ink-color(#caff08);
+}
+
+.mdc-list-item__graphic{
+    position: absolute;
+    right: 0px;
+}
+
+//.mdc-layout-grid{}
+//.mdc-layout-grid__cell{}
+  
 body
 {
-    padding: 0;
+    height: 2824px;
+    padding-top: var(--topheight);
     margin: 0;
     background: #f2edf3;
 }
 
 main {
-    padding: 0%;
-    width: var(--rightsidewidth);
+    padding-left: 10px;
+    padding-right: 10px;
     height: var(--height);
     background-color: $main;
-    float:right;
+}
+
+section{
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .top {
@@ -26,61 +55,64 @@ main {
     height: var(--topheight);
     background-color: $nav;
     position: fixed;
-    clear: both;
+    left: 0px;
     top: 0px;
-    z-index: 2;
 }
 
 .logo {
     width: var(--leftsidewidth);
     height: var(--topheight);
-    background-color: #8c6e95;
+    background-color: #9e327a;
     position: fixed;
     left: 0px;
     top: 0px;
 }
 
 .left {
-    width: var(--leftsidewidth);
     height: var(--height);
-    float: left;
     background-color: $nav;
-}
-
-.fake{
-    position: relative;
-    top: 0px;
-    clear: both;
-    width: 100%;
-    height: var(--topheight);
-}
-
-section{
-
-}
-
-three {
-    margin:20px;
-    width:100px;
-    height: 200px;
-    background-color: #000000;
+    float: left;
 }
 
 section.sales {
-    background-color: #ff0000;
+    background-color:$nav;
+    height: $secheight;
 }
 
 section.orders {
-    background-color: #0094ff;
+    background-color:$nav;
+    height: $secheight;
 }
 
 section.online {
-    background-color: #00ff21;
+    background-color:$nav;
+    height: $secheight;
 }
 
-footer{
-
+section.stats {
+    background-color:$nav;
+    height: $secheight;
 }
 
-h2{
+section.sourses {
+    background-color:$nav;
+    height: $secheight;
 }
+
+section.tickets {
+    background-color:$nav;
+    height: $secheight;
+}
+
+section.updates {
+    background-color:$nav;
+    height: $secheight;
+}
+
+section.status {
+    background-color:$nav;
+    height: $secheight;
+}
+//footer{}
+
+//h2{}

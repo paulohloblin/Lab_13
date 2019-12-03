@@ -1,32 +1,80 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-	  <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="../dist/css/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Purple</title>
   </head>
   <body>
       <nav class="top">
-        <div class="logo"></div>
+        <div class="logo">
+           
+        </div>
       </nav>
-      <div class="fake"></div>
-      <nav class="left"></nav>
-      <main>
-          <section class="three">
-              <section class="sales"></section>
-              <section class="orders"></section>
-              <section class="online"></section>
+
+      <nav class="left">
+          <aside class="mdc-drawer">
+              <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                  <a class="mdc-list-item mdc-list-item--activated " aria-selected="true" href="#" >
+                    <span class="mdc-list-item__text ">Dashboard</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">UI Elements</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">gps_fixed</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">Icons</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">contacts</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">Forms</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">format_list_bulleted</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">Charts</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bar_chart</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">Tables</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">view_module</i>
+                  </a>
+                  <a class="mdc-list-item" href="#">
+                    <span class="mdc-list-item__text">Sapmle Pages </span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">shopping_basket</i>
+                  </a>
+                </nav>
+              </div>
+            </aside>
+      </nav>
+      <main class="mdc-layout-grid__inner">
+          <section class="mdc-layout-grid__cell--span-12" style="height:1000px">
+            <section  class="mdc-layout-grid__inner">
+                <section class="sales mdc-layout-grid__cell--span-4"></section>
+                <section class="orders mdc-layout-grid__cell--span-4"></section>
+                <section class="online mdc-layout-grid__cell--span-4"></section>
+            </section>
+                <section  class="mdc-layout-grid__inner">
+                    <section class="stats mdc-layout-grid__cell--span-8"></section>
+                    <section class="sourses mdc-layout-grid__cell--span-4"></section>
+                </section>
+                <section  class="mdc-layout-grid__inner">
+                    <section class="tickets mdc-layout-grid__cell--span-12"></section>
+                </section>
+                <section  class="mdc-layout-grid__inner">
+                    <section class="updates mdc-layout-grid__cell--span-12"></section>
+                </section>
+                <section  class="mdc-layout-grid__inner">
+                    <section class="status mdc-layout-grid__cell--span-12"></section>
+                </section>
+
           </section>
-          <section></section>
-          <!--
-            ........
-            ........
-            ........
-            .......
-        -->
       </main>
       
-      <footer></footer>
-      <script src="js/scripts.js"></script>
+      <footer class="mdc-layout-grid__inner"></footer>
+      <script src="../dist/js/bundle.js" async></script>
+      <script src="../app/js/scripts.js" async></script>
   </body>
 </html>
