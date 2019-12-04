@@ -16,21 +16,49 @@ $secheight: 200px;
 }
 
 .mdc-list-item__text {
-    color:#221d20;
+    color:#29323d;
 }
 
 .mdc-list-item--activated{
-    @include mdc-drawer-item-activated-icon-ink-color(#caff08);
+    @include mdc-drawer-item-activated-icon-ink-color(#b66dff);
 }
 
 .mdc-list-item__graphic{
     position: absolute;
     right: 0px;
+    color:#29323d;
 }
 
-//.mdc-layout-grid{}
-//.mdc-layout-grid__cell{}
-  
+.mdc-list-item__graphic-categories-fr{
+    position: absolute;
+    top:6px;
+    left: 8px;
+    color: #06b99d;
+    background:-moz-linear-gradient(top, #84d9d2 0%, #06b99d 100%); 
+        background: -webkit-linear-gradient(top, #84d9d2 0%, #06b99d 100%); 
+        background: linear-gradient(to bottom, #84d9d2 0%, #06b99d 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+       -webkit-text-fill-color:transparent;
+    //linear-gradient(to bottom #84d9d2 0%, #06b99d 100%);
+}
+
+.mdc-list-item__graphic-categories-pro{
+    position: absolute;
+    top:6px;
+    left: 8px;
+    color: #06b99d;
+    background:-moz-linear-gradient(top, #ffbf96 0%, #fe7096 100%); 
+        background: -webkit-linear-gradient(top, #ffbf96 0%, #fe7096 100%); 
+        background: linear-gradient(to bottom, #ffbf96 0%, #fe7096 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+       -webkit-text-fill-color:transparent;
+    //linear-gradient(to bottom #84d9d2 0%, #06b99d 100%);
+}
+
 body
 {
     height: 2824px;
@@ -63,6 +91,7 @@ span svg
     position: fixed;
     left: 0px;
     top: 0px;
+    z-index: 2;
 }
 
 h1.mdc-typography--headline4 {
@@ -88,6 +117,55 @@ h1.mdc-typography--headline4 {
     height: var(--height);
     background-color: $nav;
     float: left;
+}
+
+.menu-projects{
+    margin: 66px 8px 8px 8px;
+    width: 223px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.menu-categories-icon{
+    position: relative;
+    left:0px;
+    top:5px;
+    margin: 0px 0px 0px 0px;
+}
+
+.menu-categories-text{
+}
+
+.menu-header-icon{
+    float:right; 
+    margin:5px 24px 0px 0px; 
+    color:#1bcfb4;
+}
+
+.menu-header-text{
+    margin:5px 60px 3px 55px; 
+    padding:0px 0px 0px 0px;
+    font-family: Lato;
+}
+
+.menu-header-text-name{
+    font-size:14px;
+}
+
+.menu-header-text-post{
+    color: #acacac; 
+    font-size:12px; 
+    font-weight: 400; 
+    line-height: 20px;
+}
+
+.mdc-button--raised{//add a project bunn
+    height:57px;
+    width: 223px;
+    min-width: initial;
+    @include mdc-button-horizontal-padding(43px);
+    background-image: linear-gradient(-179deg, #da8cff 0%, #9a55ff 100%);
+    margin: 20px 0px 20px 0px;
 }
 
 section.sales {
