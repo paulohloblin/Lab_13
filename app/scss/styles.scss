@@ -4,6 +4,8 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/typography/mdc-typography";
 @import "@material/textfield/mdc-text-field";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
 
 $main: #afaeae;
 $nav: #ffffff;
@@ -11,9 +13,6 @@ $secheight: 200px;
   
 :root{
     --height: 2724px;
-    --topheight: 100px;
-    --leftsidewidth: 18%;
-    --rightsidewidth: 82%;
     --text:15px;
     --toppadding: 5px;
 }
@@ -75,7 +74,7 @@ $secheight: 200px;
 body
 {
     height: 2824px;
-    padding-top: var(--topheight);
+    padding-top: 76px;
     margin: 0;
     background: #f2edf3;
 }
@@ -99,7 +98,7 @@ span svg
 
 .top {
     width: 100%;
-    height: var(--topheight);
+    height: 76px;
     background-color: $nav;
     position: fixed;
     left: 0px;
@@ -116,8 +115,8 @@ h1.mdc-typography--headline4 {
  }
 
 .logo {
-    width: var(--leftsidewidth);
-    height: var(--topheight);
+    width: 256px;
+    height: 76px;
     text-align:center;
     position: fixed;
     left: 0px;
@@ -202,27 +201,27 @@ section.online {
 
 section.stats {
     background-color:$nav;
-    height: $secheight;
+    height: 500px;
 }
 
 section.sourses {
     background-color:$nav;
-    height: $secheight;
+    height: 500px;
 }
 
 section.tickets {
     background-color:$nav;
-    height: $secheight;
+    height: 500px;
 }
 
 section.updates {
     background-color:$nav;
-    height: $secheight;
+    height: 500px;
 }
 
 section.status {
     background-color:$nav;
-    height: $secheight;
+    height: 500px;
 }
 //footer{}
 
