@@ -1,5 +1,5 @@
 'use strict';
-console.log("Работа начата");
+console.log("Script started");
 let html = document.querySelector("html");
 let div = document.querySelector(".logo");
 let nav = document.querySelector(".top");
@@ -17,7 +17,7 @@ nav.style.setProperty('--topheight', (height/10) + 'px');
 div.style.setProperty('--topheight', (height/10) + 'px');
 div.style.setProperty('--leftsidewidth', ((width/100)*18) + 'px');
 
-console.log("Работа уже всё");
+console.log("Script finished");
 
 /*navleft.style.setProperty('--leftsidewidth', ((width/100)*18) + 'px');
 main.style.setProperty('--rightsidewidth', clientwidth - ((width/100)*18) + 'px');

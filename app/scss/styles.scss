@@ -2,6 +2,7 @@
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/layout-grid/mdc-layout-grid";
+@import "@material/typography/mdc-typography";
 
 $main: #afaeae;
 $nav: #ffffff;
@@ -50,6 +51,11 @@ section{
     margin-bottom:10px;
 }
 
+span svg
+{
+    fill: #da8cff;
+}
+
 .top {
     width: 100%;
     height: var(--topheight);
@@ -59,10 +65,20 @@ section{
     top: 0px;
 }
 
+h1.mdc-typography--headline4 {
+    color: white;  /* Fallback: assume this color ON TOP of image */
+    background: linear-gradient(to right, #da8cff 0%, #9a55ff 100%);
+    @include mdc-typography-baseline-top(50px);
+    //@include mdc-typography(-bold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
 .logo {
     width: var(--leftsidewidth);
     height: var(--topheight);
-    background-color: #9e327a;
+    //background-image: linear-gradient(to right, #da8cff 0%, #9a55ff 100%);
+    text-align:center;
     position: fixed;
     left: 0px;
     top: 0px;
