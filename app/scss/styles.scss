@@ -3,6 +3,7 @@
 @import "@material/list/mdc-list";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/typography/mdc-typography";
+@import "@material/textfield/mdc-text-field";
 
 $main: #afaeae;
 $nav: #ffffff;
@@ -13,6 +14,8 @@ $secheight: 200px;
     --topheight: 100px;
     --leftsidewidth: 18%;
     --rightsidewidth: 82%;
+    --text:15px;
+    --toppadding: 5px;
 }
 
 .mdc-list-item__text {
@@ -59,6 +62,16 @@ $secheight: 200px;
     //linear-gradient(to bottom #84d9d2 0%, #06b99d 100%);
 }
 
+.mdc-text-field{
+    position: absolute;
+    left:256px;
+    bottom:var(--text);
+    @include mdc-text-field-fill-color(rgb(255, 255, 255));
+    @include mdc-text-field-bottom-line-color(rgb(255, 255, 255));
+    @include mdc-text-field-hover-bottom-line-color(rgb(255, 255, 255));
+    @include mdc-text-field-line-ripple-color(#8b8b8b);
+}
+
 body
 {
     height: 2824px;
@@ -98,7 +111,6 @@ h1.mdc-typography--headline4 {
     color: white;  /* Fallback: assume this color ON TOP of image */
     background: linear-gradient(to right, #da8cff 0%, #9a55ff 100%);
     @include mdc-typography-baseline-top(50px);
-    //@include mdc-typography(-bold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
  }
@@ -106,7 +118,6 @@ h1.mdc-typography--headline4 {
 .logo {
     width: var(--leftsidewidth);
     height: var(--topheight);
-    //background-image: linear-gradient(to right, #da8cff 0%, #9a55ff 100%);
     text-align:center;
     position: fixed;
     left: 0px;
@@ -131,9 +142,6 @@ h1.mdc-typography--headline4 {
     left:0px;
     top:5px;
     margin: 0px 0px 0px 0px;
-}
-
-.menu-categories-text{
 }
 
 .menu-header-icon{
@@ -166,6 +174,15 @@ h1.mdc-typography--headline4 {
     @include mdc-button-horizontal-padding(43px);
     background-image: linear-gradient(-179deg, #da8cff 0%, #9a55ff 100%);
     margin: 20px 0px 20px 0px;
+}
+
+.mathposition{
+    padding:var(--toppadding) 0px 0px 0px;
+}
+.top-menu-header-text{
+    height:44px;
+    margin-right: 30px;
+    font-family: Lato;
 }
 
 section.sales {
