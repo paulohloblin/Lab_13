@@ -41,6 +41,7 @@
     "@material/layout-grid": "^4.0.0",
     "@material/list": "^1.0.1",
     "@material/ripple": "^4.0.0",
+    "@material/shape": "^4.0.0",
     "@material/textfield": "^4.0.0",
     "@material/top-app-bar": "^4.0.0",
     "@material/typography": "^4.0.0"

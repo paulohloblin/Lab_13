@@ -6,15 +6,22 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/textfield/icon/mdc-text-field-icon";
+@import "@material/shape/mixins";
+@import "@material/shape/functions";
 
 $main: #afaeae;
 $nav: #ffffff;
-$secheight: 200px;
+$shaperadius: 4px;
   
 :root{
-    --height: 2724px;
+    --smallsectheight: 200px;
+    --largesectheight: 500px;
     --text:15px;
     --toppadding: 5px;
+    --textfieldicon: 5px;
+    --topbarheight: 76px;
+    --logomargin:10px;
 }
 
 .mdc-list-item__text {
@@ -71,24 +78,37 @@ $secheight: 200px;
     @include mdc-text-field-line-ripple-color(#8b8b8b);
 }
 
+.mdc-text-field__icon{
+    padding-top:var(--textfieldicon);
+}
+
+main.mdc-layout-grid{
+    margin-left: 256px;
+    padding: 10px 10px 0px 10px;
+    height: 100%;
+    //background-color: $main;
+}
+
+.mdc-layout-grid__inner{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-part-container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mdc-layout-grid--fixed-column-width{
+    @include mdc-layout-grid-fixed-column-width(desktop, 10px, 5px, 50px);
+}
+
 body
 {
-    height: 2824px;
-    padding-top: 76px;
+    height: 100%;
+    padding-top: var(--topbarheight);
     margin: 0;
     background: #f2edf3;
-}
-
-main {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: var(--height);
-    background-color: $main;
-}
-
-section{
-    margin-top:10px;
-    margin-bottom:10px;
 }
 
 span svg
@@ -98,7 +118,7 @@ span svg
 
 .top {
     width: 100%;
-    height: 76px;
+    height: var(--topbarheight);
     background-color: $nav;
     position: fixed;
     left: 0px;
@@ -106,25 +126,31 @@ span svg
     z-index: 2;
 }
 
-h1.mdc-typography--headline4 {
-    color: white;  /* Fallback: assume this color ON TOP of image */
+.mdc-typography--headline4{
+    color: black;
     background: linear-gradient(to right, #da8cff 0%, #9a55ff 100%);
-    @include mdc-typography-baseline-top(50px);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: auto;
  }
 
 .logo {
     width: 256px;
-    height: 76px;
-    text-align:center;
+    height: var(--topbarheight);
     position: fixed;
     left: 0px;
     top: 0px;
+    //@errorpadding-top: var(--logomargin);
+}
+
+.logowrapper{
+    margin:auto;
+    margin-top: var(--logomargin);
+    text-align:center;
 }
 
 .left {
-    height: var(--height);
+    height: 2000px;
     background-color: $nav;
     float: left;
 }
@@ -176,7 +202,7 @@ h1.mdc-typography--headline4 {
 }
 
 .mathposition{
-    padding:var(--toppadding) 0px 0px 0px;
+    margin:var(--toppadding) 0px 0px 0px;
 }
 .top-menu-header-text{
     height:44px;
@@ -184,45 +210,87 @@ h1.mdc-typography--headline4 {
     font-family: Lato;
 }
 
+section{
+    margin:0px;
+}
+
+.mainheader{
+    height:32px;
+    max-width: 1100px;
+    margin:auto;
+}
+
+.headerlogo{
+    height:32px;
+    width:36px;
+    float: left;
+    @include mdc-shape-radius($shaperadius);
+    background-color: #00c292;
+    background-image: linear-gradient(to right, #da8cff 0%, #9a55ff);
+}
+
+.material-icons.headerlogo_inner{
+    font-size: 18px;
+    position: relative;
+    left: 9px;
+    right: 9px;
+    top: 7px;
+    bottom: 7px;
+    color: white;
+}
+
 section.sales {
     background-color:$nav;
-    height: $secheight;
+    height: var(--smallsectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.orders {
     background-color:$nav;
-    height: $secheight;
+    height: var(--smallsectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.online {
     background-color:$nav;
-    height: $secheight;
+    height: var(--smallsectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.stats {
     background-color:$nav;
-    height: 500px;
+    height: var(--largesectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.sourses {
     background-color:$nav;
-    height: 500px;
+    height: var(--largesectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.tickets {
     background-color:$nav;
-    height: 500px;
+    height: var(--largesectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.updates {
     background-color:$nav;
-    height: 500px;
+    height: var(--largesectheight);
+    @include mdc-shape-radius($shaperadius);
 }
 
 section.status {
     background-color:$nav;
-    height: 500px;
+    height: var(--largesectheight);
+    @include mdc-shape-radius($shaperadius);
 }
-//footer{}
 
-//h2{}
+footer{
+    height: 60px;
+}
+
+.footer{
+    margin-top:15px;
+}
