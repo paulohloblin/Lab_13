@@ -239,22 +239,70 @@ section{
     color: white;
 }
 
+.ellipse{
+    width: 175px;
+    height: 175px;
+    opacity: 0.4;
+    @include mdc-shape-radius(87px 87px 87px 87px, $rtl-reflexive: true);
+    position: absolute;
+    bottom: -86px;
+    right: -44px;
+    background-color: white;
+}
+
+.ellipsetop{
+    width: 150px;
+    height: 150px;
+    opacity: 0.2;
+    @include mdc-shape-radius(75px 75px 75px 75px, $rtl-reflexive: true);
+    position: absolute;
+    right: -70px;
+    top: -19px;
+    background-color: white;
+}
+
 section.sales {
+    overflow: hidden;
+    position: relative;
     background-color:$nav;
+    background-image:linear-gradient(to right, #ffbf96 0%, #fe7096 100%);
     height: var(--smallsectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
 section.orders {
+    overflow: hidden;
+    position: relative;
     background-color:$nav;
+    background-image:linear-gradient(to right, rgb(120,189,244) 0%, rgb(33,142,229) 100%);
     height: var(--smallsectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
 section.online {
+    overflow: hidden;
+    position: relative;
+    background-image:linear-gradient(to right, rgb(103,210,198) 0%, rgb(44,195,173) 100%);
     background-color:$nav;
     height: var(--smallsectheight);
     @include mdc-shape-radius($shaperadius);
+}
+
+.threetopmainsections_header{
+    font-size: 18px; position: absolute; left:27px; top: 31px;
+}
+
+.threetopmainsections_number{
+    font-size: 30px; position: absolute; left:27px; top: 71px;
+}
+
+.threetopmainsections_footer{
+    font-size: 15px; position: absolute; left:27px; bottom: 29px;
+}
+
+.material-icons.threetopmainsections_icon{
+    font-size: 24px; position: absolute; right:35px; top: 31px;
+    color:white;
 }
 
 section.stats {
