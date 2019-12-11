@@ -9,6 +9,8 @@
 @import "@material/textfield/icon/mdc-text-field-icon";
 @import "@material/shape/mixins";
 @import "@material/shape/functions";
+@import "@material/checkbox/mdc-checkbox"; // Required only for data table with row selection.
+@import "@material/data-table/mdc-data-table";
 
 $main: #afaeae;
 $nav: #ffffff;
@@ -361,21 +363,99 @@ section.sourses {
 }
 
 section.tickets {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 31px;
     background-color:$nav;
     height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
+.mdc-data-table{
+    height:400px;
+    width:100%;
+    position: relative;
+    top:15px;
+    @include mdc-data-table-stroke-size(0px);
+    @include mdc-data-table-divider-size(1px);
+}
+
+.mdc-data-table__header-cell{
+    font-style: bold;
+}
+
+.name{
+    margin-left:54px;
+}
+
+.tickstatus1{
+    text-align: center;
+    height:23px;
+    width:85px;
+    padding-top:3px;
+    @include mdc-shape-radius(3px);
+    background-color: #fda2da;
+    background-image: linear-gradient(to right, #84d9d2 0%, #06b99d 100%);
+}
+
+.tickstatus2{
+    text-align: center;
+    height:23px;
+    width:85px;
+    padding-top:3px;
+    @include mdc-shape-radius(3px);
+    background-color: #fda2da;
+    background-image: linear-gradient(to right, #e5ee6e 0%, #e3e703 100%);
+}
+
+.tickstatus3{
+    text-align: center;
+    height:23px;
+    width:85px;
+    padding-top:3px;
+    @include mdc-shape-radius(3px);
+    background-color: #fda2da;
+    background-image: linear-gradient(to right, rgb(120,189,244) 0%, rgb(33,142,229) 100%);
+}
+
+.tickstatus4{
+    text-align: center;
+    height:23px;
+    width:85px;
+    padding-top:3px;
+    @include mdc-shape-radius(3px);
+    background-color: #fda2da;
+    background-image: linear-gradient(to right, #ffbf96 0%, #fe7096 100%);
+}
+
+.statustext{
+    font-size:8px;
+    color: white;
+}
+
 section.updates {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 31px;
     background-color:$nav;
     height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
 section.status {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 31px;
     background-color:$nav;
     height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
+}
+
+.sections_header{
+    font-size:18px; font-family: Ubuntu;
 }
 
 footer{

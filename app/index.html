@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <title>Purple</title>
-    <script  src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
@@ -172,28 +172,102 @@
                 </section>
                 <section class="mdc-layout-grid__inner">
                     <section class="stats mdc-layout-grid__cell--span-8">
-                        <b style="font-size:18px; font-family: Ubuntu;">Visit&Sales Statictics</b>
-                        <div style="clear:both; position: relative; height: 400px; width:100%; margin:auto; top:53px"><canvas id="stats" width="100%" height="100%"></canvas></div>
+                        <b class="sections_header">Visit&Sales Statictics</b>
+                        <div style="clear:both; position: relative; height: 400px; width:100%; margin:auto; top:53px">
+                            <canvas id="stats" width="100%" height="100%"></canvas>
+                        </div>
                     </section>
                     <section class="sourses mdc-layout-grid__cell--span-4">
-                      <b style="font-size:18px; font-family: Ubuntu;">Traffic sourses</b>
-                        <div style="clear:both; position: relative; height: 200px; width:100%; margin:auto; top:53px"><canvas id="sourses" width="100%" height="100%"></canvas></div>
-                        <div  style="position: relative; top:120px; width:100%">
-                          <div><div class="legendico1"></div>Search Engines<span class="percentage">85.7%</span></div>
-                           <div style="margin-top: 23px;"><div class="legendico2"></div>Direct Click<span class="percentage">85.7%</span></div>
-                            <div style="margin-top: 23px;"><div class="legendico3"></div>Bookmarks Click<span class="percentage">85.7%</span></div>
+                        <b class="sections_header">Traffic sourses</b>
+                        <div style="clear:both; position: relative; height: 200px; width:100%; margin:auto; top:53px">
+                            <canvas id="sourses" width="100%" height="100%"></canvas>
+                        </div>
+                        <div style="position: relative; top:120px; width:100%">
+                            <div>
+                                <div class="legendico1"></div>Search Engines<span class="percentage">85.7%</span></div>
+                            <div style="margin-top: 23px;">
+                                <div class="legendico2"></div>Direct Click<span class="percentage">85.7%</span></div>
+                            <div style="margin-top: 23px;">
+                                <div class="legendico3"></div>Bookmarks Click<span class="percentage">85.7%</span></div>
+                        </div>
+                    </section>
+
+                </section>
+                <section class="mdc-layout-grid__inner">
+                    <section class="tickets mdc-layout-grid__cell--span-12">
+                        <b class="sections_header">Recent Tickets</b>
+                        <br>
+                        <div class="mdc-data-table">
+                            <table class="mdc-data-table__table" aria-label="Recent Tickets">
+                              <thead>
+                                <tr class="mdc-data-table__header-row">
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Assignee</th>
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Subject</th>
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Status</th>
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Last Update</th>
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Tracking Id</th>
+                                </tr>
+                              </thead>
+                              <tbody class="mdc-data-table__content">
+                                <tr class="mdc-data-table__row">
+                                  <td class="mdc-data-table__cell"><img src="images/profile_pic.png" style="float: left"><p class="name">David Grey</p></td>
+                                  <td class="mdc-data-table__cell">Funds not received</td>
+                                  <td class="mdc-data-table__cell">
+                                        <div class="tickstatus1">
+                                                <b class="statustext"></b> DONE
+                                        </div>
+                                  </td>
+                                  <td class="mdc-data-table__cell">25 jun 2017</td>
+                                  <td class="mdc-data-table__cell">WD-12345</td>
+                                </tr>
+                                <tr class="mdc-data-table__row">
+                                  <td class="mdc-data-table__cell"><img src="images/profile_pic.png" style="float: left"><p class="name">Stella Johnson</p></td>
+                                  <td class="mdc-data-table__cell">assign a new task Design Purpleadmin</td>
+                                  <td class="mdc-data-table__cell">
+                                        <div class="tickstatus2">
+                                                <b class="statustext"></b> PROGRESS
+                                        </div>
+                                  </td>
+                                  <td class="mdc-data-table__cell">26 jun 2017</td>
+                                  <td class="mdc-data-table__cell">WD-12345</td>
+                                </tr>
+                                <tr class="mdc-data-table__row">
+                                  <td class="mdc-data-table__cell"><img src="images/profile_pic.png" style="float: left"><p class="name">Marina Michel</p></td>
+                                  <td class="mdc-data-table__cell">Website down for one week</td>
+                                  <td class="mdc-data-table__cell">
+                                        <div class="tickstatus3">
+                                                <b class="statustext"></b> ON HOLD
+                                        </div>
+                                  </td>
+                                  <td class="mdc-data-table__cell">27 jun 2017</td>
+                                  <td class="mdc-data-table__cell">WD-12346</td>
+                                </tr>
+
+                                <tr class="mdc-data-table__row">
+                                    <td class="mdc-data-table__cell"><img src="images/profile_pic.png" style="float: left"><p class="name">John Doe</p></td>
+                                    <td class="mdc-data-table__cell">Understanding dashboard problems</td>
+                                    <td class="mdc-data-table__cell">
+                                            <div class="tickstatus4">
+                                                    <b class="statustext"></b> REJECTED
+                                            </div>
+                                    </td>
+                                    <td class="mdc-data-table__cell">28 jun 2017</td>
+                                    <td class="mdc-data-table__cell">WD-12347</td>
+                                  </tr>
+                              </tbody>
+                            </table>
                           </div>
                     </section>
-                    
                 </section>
                 <section class="mdc-layout-grid__inner">
-                    <section class="tickets mdc-layout-grid__cell--span-12"></section>
+                    <section class="updates mdc-layout-grid__cell--span-12">
+                        <b class="sections_header">Recent Updates</b>
+                    </section>
                 </section>
                 <section class="mdc-layout-grid__inner">
-                    <section class="updates mdc-layout-grid__cell--span-12"></section>
-                </section>
-                <section class="mdc-layout-grid__inner">
-                    <section class="status mdc-layout-grid__cell--span-12"></section>
+                    <section class="status mdc-layout-grid__cell--span-12">
+                        <b class="sections_header">Recent Status</b>
+                    </section>
                 </section>
             </section>
         </section>

@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@material/button": "^4.0.0",
+    "@material/data-table": "^4.0.0",
     "@material/drawer": "^1.0.1",
     "@material/layout-grid": "^4.0.0",
     "@material/list": "^1.0.1",
