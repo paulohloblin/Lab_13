@@ -16,7 +16,7 @@ $shaperadius: 4px;
   
 :root{
     --smallsectheight: 200px;
-    --largesectheight: 500px;
+    --largesectheight: 480px;
     --text:15px;
     --toppadding: 5px;
     --textfieldicon: 5px;
@@ -306,15 +306,58 @@ section.online {
 }
 
 section.stats {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 31px;
     background-color:$nav;
     height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
 section.sourses {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 31px;
     background-color:$nav;
     height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
+}
+
+.legendico1{
+    width: 16px;
+    height: 16px;
+    background-color:black;
+    background-image:linear-gradient(to right, rgb(120,189,244) 0%, rgb(33,142,229) 100%);
+    float: left;
+    margin-right: 15px;
+    @include mdc-shape-radius(8px);
+}
+
+.legendico2{
+    width: 16px;
+    height: 16px;
+    background-color:black;
+    background-image:linear-gradient(to right, rgb(103,210,198) 0%, rgb(44,195,173) 100%);
+    float: left;
+    margin-right: 15px;
+    @include mdc-shape-radius(8px);
+}
+
+.legendico3{
+    width: 16px;
+    height: 16px;
+    background-color:black;
+    background-image: linear-gradient(to right, #ffbf96 0%, #fe7096 100%);
+    float: left;
+    margin-right: 15px;
+    @include mdc-shape-radius(8px);
+}
+.percentage{
+    float:right;
+    position: absolute;
+    right:0;
 }
 
 section.tickets {

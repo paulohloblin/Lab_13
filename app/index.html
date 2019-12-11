@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <title>Purple</title>
+    <script  src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
@@ -170,8 +171,20 @@
                     </section>
                 </section>
                 <section class="mdc-layout-grid__inner">
-                    <section class="stats mdc-layout-grid__cell--span-8"></section>
-                    <section class="sourses mdc-layout-grid__cell--span-4"></section>
+                    <section class="stats mdc-layout-grid__cell--span-8">
+                        <b style="font-size:18px; font-family: Ubuntu;">Visit&Sales Statictics</b>
+                        <div style="clear:both; position: relative; height: 400px; width:100%; margin:auto; top:53px"><canvas id="stats" width="100%" height="100%"></canvas></div>
+                    </section>
+                    <section class="sourses mdc-layout-grid__cell--span-4">
+                      <b style="font-size:18px; font-family: Ubuntu;">Traffic sourses</b>
+                        <div style="clear:both; position: relative; height: 200px; width:100%; margin:auto; top:53px"><canvas id="sourses" width="100%" height="100%"></canvas></div>
+                        <div  style="position: relative; top:120px; width:100%">
+                          <div><div class="legendico1"></div>Search Engines<span class="percentage">85.7%</span></div>
+                           <div style="margin-top: 23px;"><div class="legendico2"></div>Direct Click<span class="percentage">85.7%</span></div>
+                            <div style="margin-top: 23px;"><div class="legendico3"></div>Bookmarks Click<span class="percentage">85.7%</span></div>
+                          </div>
+                    </section>
+                    
                 </section>
                 <section class="mdc-layout-grid__inner">
                     <section class="tickets mdc-layout-grid__cell--span-12"></section>

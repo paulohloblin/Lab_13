@@ -41,7 +41,10 @@ module.exports = [{
           query: {
             presets: ['@babel/preset-env'],
           },
-        }
+        },
       ]
     },
+    externals: {
+      moment: 'moment'
+  }
   }];
