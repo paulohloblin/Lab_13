@@ -1,6 +1,6 @@
 'use strict';
 console.log("Script started");
-let topbarheight = 70;
+let topbarheight = 80;
 let tbheight_selector = document.querySelector(".top");
 let bodypadding_selector = document.querySelector("body");
 let logoheight_selector = document.querySelector(".logo");
@@ -87,4 +87,54 @@ var chart = new Chart(ctx, {
       maintainAspectRatio:false
     }
 });
+
+var c = document.getElementById("bar5");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "rgb(120,189,244)");
+grd.addColorStop(1, "rgb(33,142,229)");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 122, 6);
+
+var c = document.getElementById("bar4");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "#ffbf96");
+grd.addColorStop(1, "#fe7096");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 80, 6);
+
+var c = document.getElementById("bar3");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "#da8cff");
+grd.addColorStop(1, "#9a55ff");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 175, 6);
+
+var c = document.getElementById("bar2");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "#e5ee6e");
+grd.addColorStop(1, "#e3e703");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 200, 6);
+
+var c = document.getElementById("bar1");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "rgb(103,210,198)");
+grd.addColorStop(1, "rgb(44,195,173)");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 100, 6);
 console.log("Script finished");

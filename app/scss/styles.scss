@@ -11,6 +11,7 @@
 @import "@material/shape/functions";
 @import "@material/checkbox/mdc-checkbox"; // Required only for data table with row selection.
 @import "@material/data-table/mdc-data-table";
+@import "@material/image-list/mdc-image-list";
 
 $main: #afaeae;
 $nav: #ffffff;
@@ -22,8 +23,22 @@ $shaperadius: 4px;
     --text:15px;
     --toppadding: 5px;
     --textfieldicon: 5px;
-    --topbarheight: 76px;
+    --topbarheight: 66px;
     --logomargin:10px;
+}
+
+.my-image-list {
+    @include mdc-image-list-standard-columns(2, 11px);
+}
+
+.mdc-image-list__item{
+    width: 495px;
+    @include mdc-image-list-aspect(2.2);
+}
+
+.mdc-image-list__image-aspect-container.mdc-image-list__image{
+    width: 495px;
+    @include mdc-image-list-aspect(2.2);
 }
 
 .mdc-list-item__text {
@@ -82,6 +97,10 @@ $shaperadius: 4px;
 
 .mdc-text-field__icon{
     padding-top:var(--textfieldicon);
+}
+
+.mdc-drawer{
+    //width:200px;
 }
 
 main.mdc-layout-grid{
@@ -367,20 +386,22 @@ section.tickets {
     padding-left: 37px;
     padding-right: 37px;
     padding-top: 31px;
+    padding-bottom: 31px;
     background-color:$nav;
-    height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
 .mdc-data-table{
-    height:400px;
+    margin-top: 15px;
     width:100%;
-    position: relative;
-    top:15px;
     @include mdc-data-table-stroke-size(0px);
     @include mdc-data-table-divider-size(1px);
+    @include mdc-data-table-cell-height(70px);
 }
 
+td.white{
+    color:white;
+}
 .mdc-data-table__header-cell{
     font-style: bold;
 }
@@ -439,9 +460,68 @@ section.updates {
     padding-left: 37px;
     padding-right: 37px;
     padding-top: 31px;
+    padding-bottom: 31px;
     background-color:$nav;
-    height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
+}
+
+.updates-author{
+    position:relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Ubuntu;
+    font-size:16px;
+    color:#888;
+}
+
+.updates-author-name{
+    float:left;
+    margin-right: 20px;
+}
+
+.updates-footer{
+    margin-top:35px;
+    width:100%;
+}
+
+.material-icons.updates-author-icon{
+    /*position: absolute;
+    top:0;
+    left:0;*/
+    margin-right: 10px;
+    float:left;
+    font-size: 20px;
+}
+
+.updates-footer{
+    position: relative;
+    height:45px;
+}
+
+.updates-footer-headline{
+    overflow:hidden;
+    margin-left:15px;
+    font-family: Ubuntu;
+    height:17px;
+    font-size:16px;
+    font-style:bold;
+}
+
+.updates-footer-text{
+    overflow:hidden;
+    position: absolute;
+    bottom: 5px;
+    left:44px;
+    margin-left:15px;
+    height:16px;
+    font-family: Ubuntu;
+    font-size:14px;
+    color:#343a40;
+}
+
+.mdc-card{
+    width:100px;
+    height:200px;
 }
 
 section.status {
@@ -449,8 +529,8 @@ section.status {
     padding-left: 37px;
     padding-right: 37px;
     padding-top: 31px;
+    padding-bottom: 31px;
     background-color:$nav;
-    height: var(--largesectheight);
     @include mdc-shape-radius($shaperadius);
 }
 
@@ -464,4 +544,12 @@ footer{
 
 .footer{
     margin-top:15px;
+}
+
+.avatar{
+    float:left;
+    vertical-align: middle;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
 }
