@@ -12,10 +12,12 @@
 @import "@material/checkbox/mdc-checkbox"; // Required only for data table with row selection.
 @import "@material/data-table/mdc-data-table";
 @import "@material/image-list/mdc-image-list";
+@import "@material/menu-surface/mdc-menu-surface";
 
 $main: #afaeae;
 $nav: #ffffff;
 $shaperadius: 4px;
+$sectionshadow: 0 0 3px rgba(122,122,122,0.5);
   
 :root{
     --smallsectheight: 200px;
@@ -42,6 +44,7 @@ $shaperadius: 4px;
 }
 
 .mdc-list-item__text {
+    font-family: Ubuntu;
     color:#29323d;
 }
 
@@ -104,8 +107,9 @@ $shaperadius: 4px;
 }
 
 main.mdc-layout-grid{
+    font-family: Ubuntu;
     margin-left: 256px;
-    padding: 10px 10px 0px 10px;
+    padding: 30px 30px 0px 30px;
     height: 100%;
     //background-color: $main;
 }
@@ -126,7 +130,7 @@ main.mdc-layout-grid{
 
 body
 {
-    height: 100%;
+    position:relative;
     padding-top: var(--topbarheight);
     margin: 0;
     background: #f2edf3;
@@ -146,6 +150,18 @@ span svg
     top: 0px;
     z-index: 2;
 }
+
+@media screen and (max-width: 1100px) {
+    .top button {display: none;}
+    .top a.top-menu-user {
+      float: right;
+      height:44px; display: block;
+      text-decoration: none;
+      @include mdc-shape-radius(6px);
+      padding:2px;
+    }
+  }
+
 
 .mdc-typography--headline4{
     color: black;
@@ -171,9 +187,11 @@ span svg
 }
 
 .left {
-    height: 2000px;
     background-color: $nav;
     float: left;
+    height:100%;
+    position: absolute;
+    top:(var(--topbarheight)); bottom:0;
 }
 
 .menu-projects{
@@ -225,10 +243,45 @@ span svg
 .mathposition{
     margin:var(--toppadding) 0px 0px 0px;
 }
-.top-menu-header-text{
+.top-menu-text{
+    font-family: Ubuntu;
+    font-size:15px;
     height:44px;
     margin-right: 30px;
-    font-family: Lato;
+    float: right;
+}
+
+.top-menu-user{
+    height:44px; display: block; float:left;
+    text-decoration: none;
+    @include mdc-shape-radius(6px);
+    padding:2px;
+}
+
+.top-menu-user:hover{
+    color:black;
+    background-color: rgb(243, 243, 243);
+}
+
+.top-menu-user:visited{
+    color:black;
+}
+
+.top-menu-user:active{
+    color:black;
+    background-color: rgb(243, 243, 243);
+}
+
+.material-icons.top-menu-icon{
+    font-size: 20px;
+}
+
+.mdc-icon-button{
+    margin-left:30px; float:right; font-size: 20px;
+    height: 44px;
+    width: 44px;
+    color:#9c9fa6;
+    padding:0;
 }
 
 section{
@@ -283,6 +336,7 @@ section{
 }
 
 section.sales {
+    box-shadow: $sectionshadow;
     overflow: hidden;
     position: relative;
     background-color:$nav;
@@ -292,6 +346,7 @@ section.sales {
 }
 
 section.orders {
+    box-shadow: $sectionshadow;
     overflow: hidden;
     position: relative;
     background-color:$nav;
@@ -301,6 +356,7 @@ section.orders {
 }
 
 section.online {
+    box-shadow: $sectionshadow;
     overflow: hidden;
     position: relative;
     background-image:linear-gradient(to right, rgb(103,210,198) 0%, rgb(44,195,173) 100%);
@@ -311,14 +367,17 @@ section.online {
 
 .threetopmainsections_header{
     font-size: 18px; position: absolute; left:27px; top: 31px;
+    color:white;
 }
 
 .threetopmainsections_number{
     font-size: 30px; position: absolute; left:27px; top: 71px;
+    color:white;
 }
 
 .threetopmainsections_footer{
     font-size: 15px; position: absolute; left:27px; bottom: 29px;
+    color:white;
 }
 
 .material-icons.threetopmainsections_icon{
@@ -327,6 +386,7 @@ section.online {
 }
 
 section.stats {
+    box-shadow: $sectionshadow;
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
@@ -337,6 +397,7 @@ section.stats {
 }
 
 section.sourses {
+    box-shadow: $sectionshadow;
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
@@ -382,6 +443,7 @@ section.sourses {
 }
 
 section.tickets {
+    box-shadow: $sectionshadow;
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
@@ -392,11 +454,16 @@ section.tickets {
 }
 
 .mdc-data-table{
+    font-family: Ubuntu;
     margin-top: 15px;
     width:100%;
     @include mdc-data-table-stroke-size(0px);
     @include mdc-data-table-divider-size(1px);
     @include mdc-data-table-cell-height(70px);
+}
+
+.progress{
+    width:300px;
 }
 
 td.white{
@@ -456,6 +523,7 @@ td.white{
 }
 
 section.updates {
+    box-shadow: $sectionshadow;
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
@@ -525,6 +593,7 @@ section.updates {
 }
 
 section.status {
+    box-shadow: $sectionshadow;
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
@@ -544,6 +613,12 @@ footer{
 
 .footer{
     margin-top:15px;
+    color: #888;
+}
+
+.material-icons.footer-icon{
+    font-size:16px; position:relative; top:2px; right:2px;
+    color: #fe7096;
 }
 
 .avatar{

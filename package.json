@@ -43,6 +43,7 @@
     "@material/image-list": "^4.0.0",
     "@material/layout-grid": "^4.0.0",
     "@material/list": "^1.0.1",
+    "@material/menu-surface": "^4.0.0",
     "@material/ripple": "^4.0.0",
     "@material/shape": "^4.0.0",
     "@material/textfield": "^4.0.0",

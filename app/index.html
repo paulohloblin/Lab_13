@@ -31,15 +31,28 @@
             <div class="mdc-line-ripple"></div>
         </section>
 
-        <section class="mathposition top-menu-header-text" style="float: right;">
-            <img src="images/GreyDavid.jpg" alt="David Grey" class="avatar">
-            <b style="margin-left:5px; line-height: 45px;">David Grey.H</b>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; margin-left:30px;  float:right">format_line_spacing</i>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; margin-left:30px;  float:right">power_settings_new</i>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; margin-left:30px;  float:right">notifications_none</i>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; margin-left:30px;  float:right">mail_outline</i>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; margin-left:30px; float:right">crop_free</i>
-            <i class="material-icons" aria-hidden="true" style="margin-top:10px; float:right">expand_more</i>
+        <section class="mathposition top-menu-text">
+            
+            
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><i class="material-icons top-menu-icon">format_line_spacing</i></button>
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><i class="material-icons top-menu-icon">power_settings_new</i></button>
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><i class="material-icons top-menu-icon">notifications_none</i></button>
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><i class="material-icons top-menu-icon">mail_outline</i></button>
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><i class="material-icons top-menu-icon">crop_free</i></button>
+            <a id="user" href="#" class="top-menu-user">
+                    <img src="images/GreyDavid.jpg" alt="David Grey" class="avatar">
+                    <span style="margin-left:5px;">David Grey.H</span>
+                    <i class="material-icons" style="margin-top:12px; font-size: 15px;">expand_more</i>
+                    <div class="mdc-menu-surface--anchor">
+                            <div  class="mdc-menu-surface">
+                                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                                            <li class="mdc-list-item" role="menuitem"><span class="mdc-list-item__text">Item_1</span></li>
+                                            <li class="mdc-list-item" role="menuitem"><span class="mdc-list-item__text">Item_2</span></li>
+                                            <li class="mdc-list-item" role="menuitem"><span class="mdc-list-item__text">Item_3</span></li>
+                                     </ul>
+                            </div>
+                    </div>
+            </a>
         </section>
     </nav>
 
@@ -183,12 +196,12 @@
                             <canvas id="sourses" width="100%" height="100%"></canvas>
                         </div>
                         <div style="position: relative; top:120px; width:100%">
-                            <div>
-                                <div class="legendico1"></div>Search Engines<span class="percentage">85.7%</span></div>
-                            <div style="margin-top: 23px;">
-                                <div class="legendico2"></div>Direct Click<span class="percentage">85.7%</span></div>
-                            <div style="margin-top: 23px;">
-                                <div class="legendico3"></div>Bookmarks Click<span class="percentage">85.7%</span></div>
+                            <div class="legend1">
+                                <div class="legendico1"></div><span>Search Engines</span><span class="percentage">33%</span></div>
+                            <div class="legend2" style="margin-top: 23px;">
+                                <div class="legendico2"></div><span>Direct Click</span><span class="percentage">33%</span></div>
+                            <div class="legend3" style="margin-top: 23px;">
+                                <div class="legendico3"></div><span>Bookmarks Click</span><span class="percentage">34%</span></div>
                         </div>
                     </section>
 
@@ -303,14 +316,14 @@
                 <section class="mdc-layout-grid__inner">
                     <section class="status mdc-layout-grid__cell--span-12">
                         <b class="sections_header">Recent Status</b>
-                        <div class="mdc-data-table">
+                        <div class="mdc-data-table status">
                                 <table class="mdc-data-table__table" aria-label="Recent Tickets">
                                   <thead>
                                     <tr class="mdc-data-table__header-row">
                                       <th class="mdc-data-table__header-cell" role="columnheader" scope="col">#</th>
                                       <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Name</th>
                                       <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Due Date	</th>
-                                      <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Progress</th>
+                                      <th class="mdc-data-table__header-cell progress" role="columnheader" scope="col">Progress</th>
                                     </tr>
                                   </thead>
                                   <tbody class="mdc-data-table__content">
@@ -360,8 +373,8 @@
                     &copy; 2019 Pavlo Ohloblin. All rights not reserved.
                 </div>
                 <div class="footer" style="float: right;">
-                    Hand-crafted and made with &nbsp;
-                    <i class="material-icons">favorite</i>
+                    <span>Hand-crafted and made with &nbsp;</span>
+                    <i class="material-icons footer-icon">favorite</i>
                 </div>
             </section>
         </footer>
